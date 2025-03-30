@@ -1,0 +1,50 @@
+{
+  "url": "example.com",
+  "ALLOWAUTOCONFIG": false,
+  "commands": {
+    "list": {
+      "command": "list",
+      "persmissions": [
+        "any"
+      ]
+    },
+    "whitelist": {
+      "command": "whitelist",
+      "subcommands": {
+        "add": {
+          "command": "add",
+          "permissions": [
+            "admin",
+            "moderator"
+          ]
+        },
+        "remove": {
+          "command": "remove",
+          "permissons": [
+            "admin",
+            "moderator"
+          ]
+        },
+        "list": {
+          "command": "list"
+        }
+      }
+    },
+    "op": {
+      "command": "op",
+      "permissions": [
+        "admin"
+      ]
+    },
+    "deop": {
+      "command": "op",
+      "persmissions": [
+        "admin"
+      ]
+    }
+  },
+  "rolePermissions": {
+    "admin": "UUID",
+    "moderator": "UUID"
+  }
+}
