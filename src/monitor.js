@@ -18,7 +18,10 @@ async function monitor(client, url) {
       } else {
         client.user.setStatus(PresenceUpdateStatus.Online);
         client.user.setActivity(
-          `${body.players.now} of ${body.players.max} Online`
+          `${body.players.now} of ${body.players.max} Online`,
+          {
+            type: ActivityType.Custom,
+          }
         );
       }
 
