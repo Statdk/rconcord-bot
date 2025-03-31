@@ -1,0 +1,7 @@
+services:
+  node:
+    image: node:latest
+    volumes:
+      - .:/data:rw
+    restart: unless-stopped
+    command: ["/bin/sh", "-c", "cd /data && npm ci && npm start"]
